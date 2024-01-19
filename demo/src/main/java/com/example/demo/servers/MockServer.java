@@ -11,7 +11,7 @@ public class MockServer {
     @PostConstruct
     public void startServer() {
         System.out.println( );
-        WireMockConfiguration config = WireMockConfiguration.options().port(8000).bindAddress("0.0.0.0").usingFilesUnderClasspath("endPointMappings"); // Specify the directory containing mappings
+        WireMockConfiguration config = WireMockConfiguration.options().port(8000).bindAddress("0.0.0.0").usingFilesUnderClasspath("mappings"); // Specify the directory containing mappings
 
         // Start the WireMock server
         WireMockServer wireMockServer = new WireMockServer(config);

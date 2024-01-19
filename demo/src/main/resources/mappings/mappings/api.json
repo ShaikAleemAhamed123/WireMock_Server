@@ -1,0 +1,44 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "url": "/ping"
+      },
+      "response": {
+        "body": "Pong!"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/employee/1"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "id": 1,
+          "name": "Satyendra"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/employee"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": [
+          {"id": 1, "name": "Satyendra"},
+          {"id": 2, "name": "Jackson"}
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  ]
+}
